@@ -1,0 +1,24 @@
+{
+  "name": "angular-meta-title",
+  "version": "0.1.0",
+  "authors": [
+    "L42y <423300@gmail.com>"
+  ],
+  "description": "<title> as an AngularJS component",
+  "main": "angular-meta-title.js",
+  "keywords": [
+    "angular"
+  ],
+  "license": "WTFPL",
+  "homepage": "https://github.com/L42y/angular-meta-title",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sprintf": "v0.7"
+  }
+}
