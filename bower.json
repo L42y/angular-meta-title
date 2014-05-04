@@ -19,6 +19,6 @@
     "tests"
   ],
   "dependencies": {
-    "sprintf": "v0.7"
+    "sprintf": "~1.0.0"
   }
 }
