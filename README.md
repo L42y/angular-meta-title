@@ -29,12 +29,20 @@ angular.module('App', [
             page: 'About',
             format: '%(page)s · %(name)s'
         },
+        controller: 'AboutCtrl',
         templateUrl: 'views/pages/about.html'
     });
 }).controller('GlobalCtrl', function (
     Title
 ) {
     this.title = Title;
+}).controller('AboutCtrl', function (
+    Title
+) {
+    Title.set({
+        page: '关于'
+        format: '%(page)s'
+    });
 });
 ```
 
