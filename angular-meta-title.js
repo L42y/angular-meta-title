@@ -1,5 +1,4 @@
-angular.module('l42y.meta.title', []).provider('Title', function (
-) {
+angular.module('l42y.meta.title', []).provider('Title', function () {
   var api = {
     name: 'title'
   };
@@ -15,12 +14,19 @@ angular.module('l42y.meta.title', []).provider('Title', function (
       $window,
       $rootScope
     ) {
-      $rootScope.$on('$routeChangeSuccess', function ($event, current) {
+      function setTitleContent (options) {
         var op = service.options;
-        op = current.title ? angular.extend(op, current.title) : defaults;
-
+        op = options ? angular.extend(op, options) : defaults;
         api.content = $window.sprintf(op.format, op);
+
+        return api.content;
+      }
+
+      $rootScope.$on('$routeChangeSuccess', function ($event, current) {
+        setTitleContent(current.title);
       });
+
+      api.set = setTitleContent;
 
       return api;
     }
