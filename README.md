@@ -3,8 +3,9 @@
 ## Installation
 
 1. `bower install --save angular-meta-title`
-2. including `angular-meta-title.js` script file provided by this component into your application
-3. adding `l42y.meta.title` as a module dependency to your application
+2. including script file provided by bower component `sprintf` into your application
+3. including `angular-meta-title.js` script file provided by this component into your application
+4. adding `l42y.meta.title` as a module dependency to your application
 
 ## Usage
 
