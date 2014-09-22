@@ -4,7 +4,10 @@
     "L42y <423300@gmail.com>"
   ],
   "description": "<title> as an AngularJS component",
-  "main": "angular-meta-title.js",
+  "main": [
+    "angular-meta-title.js",
+    "angular-meta-service.js"
+  ],
   "keywords": [
     "angular"
   ],
