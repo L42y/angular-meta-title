@@ -6,7 +6,8 @@
   "description": "<title> as an AngularJS component",
   "main": [
     "angular-meta-title.js",
-    "angular-meta-service.js"
+    "angular-meta-service.js",
+    "angular-meta-directive.js"
   ],
   "keywords": [
     "angular"
