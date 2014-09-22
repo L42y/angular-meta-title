@@ -1,4 +1,5 @@
-angular.module('l42y.meta.title', []).provider('Title', function () {
+angular.module('l42y.meta.title', [
+]).provider('Title', function () {
   var api = {
     name: 'title'
   };
@@ -22,10 +23,6 @@ angular.module('l42y.meta.title', []).provider('Title', function () {
         return api.content;
       }
 
-      $rootScope.$on('$routeChangeSuccess', function ($event, current) {
-        setTitleContent(current.title);
-      });
-
       api.set = setTitleContent;
 
       return api;
@@ -33,4 +30,15 @@ angular.module('l42y.meta.title', []).provider('Title', function () {
   };
 
   return service;
+}).run(function (
+  $rootScope,
+  Title
+) {
+  $rootScope.$on('$routeChangeSuccess', function ($event, current) {
+    Title.set(current.title);
+  });
+
+  $rootScope.$on('$stateChangeSuccess', function ($event, toState) {
+    Title.set(toState.title);
+  });
 });
